@@ -14,17 +14,16 @@ A sample data file for 5 drivers, with 5 trajectories for each, is shared in 'da
 ## Experiments
 
 1. Statistical Feature Matrix: In order to create the statistical feature matrix as described in the paper, you need to run 'IBM16_FeatureMatrix.py' which creates two files in data folder. 
-2. CNN: In oredr to train and test the CNN-based architecture in the paper, you need to run 'IBM16_CNN.py'. This script trains and saves the best model in 'models' folder, and uses the best model for testing. 
-3. RNN: In oredr to train and test the RNN-based architecture in the paper, you need to run 'IBM16_RNN.py'. This script trains and saves the best model in 'models' folder, and uses the best model for testing.
+2. Train ARNet Model: In order to train an ARNet model, you need to run script 'IBM17-ARNet.py'. The input for this script is the statistical feature matrix and output is a trained model. 
+3. Clustering: In order to build representation for test trajectories and perform the clustering, you can use 'IBM17-Clustering.py'. The input for this script is the trained ARNet model and a set of test trajectories as described in the paper. The output will be the clustering results and also the created emebddings for each trajectory. 
 
 ## Results
 
-Our best results for driver classification task based on a real-world, private, and non-anonymized (gps coordinates) dataset of 50 drivers with 200 trajectories for each is as follows:
+Our best results for driver clustering task based on a set of real-world, private, and non-anonymized (based on gps coordinates) datasets are as follows:
 
-| Model | #Drivers | #Trajectories | Test Accuracy | Note |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| CNN  | 50  | 200  | 16.4%  | Using Momentum Nestrov Optimizer; Momentum=0.9 |
-| RNN  | 50  | 200  | 25.0%  | LSTM cells, 2 Layers; Dropout on Second layer (0.6), Batch 256 |
+| #Drivers | #Trajectories/Driver | #Driver_Avg Of Error | #Driver_Std Of Error | AMI Avg | AMI Std |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 1 | 200 | 0.33 | 0.55 | 0.71 | 0.45 |
 
 Note that here we used LSTM cells, instead of using RNN cells with identity matrix for recurrent weight initialization, as such thing is not available in Tensorflow currently. However, as mentioned by <a href="https://arxiv.org/abs/1504.00941">Le et al.</a>, the initialized recurrent weight solution provides comaprable results to LSTM cells. 
 
