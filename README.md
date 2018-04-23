@@ -39,4 +39,4 @@ Note that here we used 25 sets of trajectories with D drivers for each of the ab
 
 ## References 
 
-1. [Characterizing Driving Styles with Deep Learning, 2016](https://arxiv.org/pdf/1607.03611.pdf)
+1. [Autoencoder Regularized Network For Driving Style Representation Learning, 2017](https://arxiv.org/pdf/1701.01272.pdf)
