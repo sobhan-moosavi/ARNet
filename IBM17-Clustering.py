@@ -288,10 +288,9 @@ if __name__ == '__main__':
                 ami = adjusted_mutual_info_score(Y, predicted_labels)
                 print('#Drivers: {:}, #Clusters: {:}, AMI: {:.2f}'.format(num_classes, len(np.unique(predicted_labels)), ami))            
                 num_error = np.abs(num_classes - len(np.unique(predicted_labels)))
-                if num_error < 10:
-                    numOfCluster.append(num_error)
-                    amis.append(ami)
-                    runs += 1
+                numOfCluster.append(num_error)
+                amis.append(ami)
+                runs += 1
             except:
                 continue
     
