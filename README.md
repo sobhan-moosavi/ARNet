@@ -33,7 +33,7 @@ Our best results for driver clustering task based on a set of real-world, privat
 | 8 | 200 | 1.08 | 0.49 | 0.1 | 0.02 |
 | 9 | 200 | 1 | 0.74 | 0.12 | 0.04 |
 | 10 | 200 | 1.6 | 0.63 | 0.12 | 0.04 |
-|  Average | 0.63 | 0.54 | 0.19 | 0.1 |
+||  Average | 0.63 | 0.54 | 0.19 | 0.1 |
 
 Note that here we used LSTM cells, instead of using RNN cells with identity matrix for recurrent weight initialization, as such thing is not available in Tensorflow currently. However, as mentioned by <a href="https://arxiv.org/abs/1504.00941">Le et al.</a>, the initialized recurrent weight solution provides comaprable results to LSTM cells. 
 
