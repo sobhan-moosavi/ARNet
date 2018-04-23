@@ -35,7 +35,7 @@ Our best results for driver clustering task based on a set of real-world, privat
 | 10 | 200 | 1.6 | 0.63 | 0.12 | 0.04 |
 ||  **Average** | **0.63** | **0.54** | **0.19** | **0.1** |
 
-Note that here we used 25 sets of trajectories with D drivers for each of the above results. We used Affinity Propagation clustering algorithm as suggested by the paper with preference parameter -65 and damping factor 0.5. The results in above table can be compared with results in Tables 1 and 2 in the [paper](https://arxiv.org/pdf/1701.01272.pdf). 
+Note that here we used 25 sets of trajectories with D drivers for each of the rows in above table. We used Affinity Propagation clustering algorithm as suggested by the paper with preference parameter -65 and damping factor 0.5. The results in above table can be compared with the results in Tables 1 and 2 in the [ARNet paper](https://arxiv.org/pdf/1701.01272.pdf). 
 
 ## References 
 
