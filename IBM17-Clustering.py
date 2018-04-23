@@ -284,7 +284,7 @@ if __name__ == '__main__':
             Y = np.asarray(Y)         
             
             try:
-                predicted_labels = AffinityPropagation(damping=0.5, preference=-14).fit_predict(X)
+                predicted_labels = AffinityPropagation(damping=0.5, preference=-65).fit_predict(X)
                 ami = adjusted_mutual_info_score(Y, predicted_labels)
                 print('#Drivers: {:}, #Clusters: {:}, AMI: {:.2f}'.format(num_classes, len(np.unique(predicted_labels)), ami))            
                 num_error = np.abs(num_classes - len(np.unique(predicted_labels)))
