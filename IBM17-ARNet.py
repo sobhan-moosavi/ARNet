@@ -276,7 +276,7 @@ if __name__ == '__main__':
                 print('#nonZero embedding vectors: {:}, out of {:} vectors'.format(nonZeroEmbedVecs, len(s)))            
             print('Step {:2d}, Epoch {:2d}, Train Loss {:.3f}, Train_JR {:.3f}, Train_CE {:.3f}, Test-Loss {:.3f}, Test_JR {:.3f}, Test_CE {:.3f}, Test-Accuracy {:.1f}%, ({:.1f} sec)'.format(step + 1, epoch, loss, loss_jr, loss_ce, test_loss, test_loss_jr, test_loss_ce, 100 * acc, (time.time()-start)))            
             start = time.time()
-        next_batch_start += next_batch_start+batch_size
+        next_batch_start += batch_size
         if next_batch_start >= len(train):
             train, train_labels = shuffle_in_union(train, train_labels)
             test, test_labels = shuffle_in_union(test, test_labels)
